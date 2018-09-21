@@ -1,0 +1,32 @@
+导航栏
+
+留言板
+
+登录模态框
+
+个人管理界面
+
+todolist
+
+我喜欢的音乐《网易云api
+我喜欢的电影《豆瓣api
+我喜欢的视频《b站api
+
+ methods: {
+    test: function () {
+      var _this = this
+      new Promise(function (resolve, reject) {
+        this.$axios.post('/jsPage', {page: 1}).then(res => {
+          res.data.forEach(function (item) {
+            _this.aritcleList.push({
+              title: item.title,
+              content: item.content,
+              url: item.url
+            })
+          })
+      })
+      var article = require('/source/内置类型.md')
+      console.log(article)
+    }
+    }
+  },
